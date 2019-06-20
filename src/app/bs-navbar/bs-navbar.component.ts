@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../services/auth.service';
+import { Observable } from 'rxjs';
+import { AppUser } from '../models/app-user';
 
 @Component({
   selector: 'bs-navbar',
@@ -13,4 +15,6 @@ export class BsNavbarComponent {
   logout() {
     this.auth.logout();
   }
+
+  
 }
