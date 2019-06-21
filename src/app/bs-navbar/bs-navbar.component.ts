@@ -9,7 +9,9 @@ import { AppUser } from '../models/app-user';
   styleUrls: ['./bs-navbar.component.css']
 })
 export class BsNavbarComponent {
-  constructor(public auth: AuthService) { 
+  appUser: AppUser;
+  constructor(private auth: AuthService) { 
+    auth.appUser$.subscribe(appUser => this.appUser = appUser);
   }
 
   logout() {
