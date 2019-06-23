@@ -24,6 +24,8 @@ import { UserService } from './services/user.service';
 import { AdminAuthGuard } from './services/admin-auth-guard.service';
 import { ProductFormComponent } from './admin/product-form/product-form.component';
 import { CategoryService } from './services/category.service';
+import { FormsModule } from '@angular/forms';
+import { ProductService } from './services/product.service';
 
 
 
@@ -44,6 +46,7 @@ import { CategoryService } from './services/category.service';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AngularFireDatabaseModule,
     AngularFireModule.initializeApp(environment.firebase, 'oshop'),
     AngularFireAuthModule,
@@ -80,7 +83,8 @@ import { CategoryService } from './services/category.service';
     AuthGuard,
     UserService,
     AdminAuthGuard,
-    CategoryService
+    CategoryService,
+    ProductService
   ],
   bootstrap: [AppComponent]
 })
