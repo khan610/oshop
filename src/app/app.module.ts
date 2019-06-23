@@ -26,6 +26,7 @@ import { ProductFormComponent } from './admin/product-form/product-form.componen
 import { CategoryService } from './services/category.service';
 import { FormsModule } from '@angular/forms';
 import { ProductService } from './services/product.service';
+import { CustomFormsModule } from 'ng2-validation';
 
 
 
@@ -46,6 +47,7 @@ import { ProductService } from './services/product.service';
   ],
   imports: [
     BrowserModule,
+    CustomFormsModule,
     FormsModule,
     AngularFireDatabaseModule,
     AngularFireModule.initializeApp(environment.firebase, 'oshop'),
